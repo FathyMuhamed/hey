@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { FiSearch, FiX, FiDownload, FiCheck } from "react-icons/fi";
+import { IoMailUnreadOutline } from "react-icons/io5";
+import Time from "./Time";
 
 export default function DynamicIsland({
   islandState,
@@ -24,6 +26,17 @@ export default function DynamicIsland({
       }}
       transition={{ type: "spring", damping: 40, stiffness: 400 }}
     >
+      <Time style={islandState !== "nav" ? "top-2.5" : "top-1"} />
+      <a
+        href="mailto:fathyymuhamed@gmail.com"
+        className={`text-white/70 hover:text-white transition-colors
+        absolute ${
+          islandState !== "nav" ? "top-2.5" : "top-1"
+        } -right-12 -translate-x-1/2 bg-white backdrop-blur-xl z-50
+        `}
+      >
+        <IoMailUnreadOutline className="w-6 h-6 text-black" />
+      </a>
       <AnimatePresence mode="wait">
         {islandState === "nav" && <NavState setIslandState={setIslandState} />}
 
@@ -60,12 +73,14 @@ function NavState({ setIslandState }) {
       className="flex items-center justify-between h-full px-4"
     >
       <div className="w-1.5 h-1.5 rounded-full bg-[#216E39]" />
-      <button
-        onClick={() => setIslandState("search")}
-        className="text-white/70 hover:text-white transition-colors"
-      >
-        <FiSearch className="w-3.5 h-3.5 text-black" />
-      </button>
+      <div className="flex items-center gap-2 ">
+        <button
+          onClick={() => setIslandState("search")}
+          className="text-white/70 hover:text-white transition-colors"
+        >
+          <FiSearch className="w-4 h-4 text-black" />
+        </button>
+      </div>
     </motion.div>
   );
 }

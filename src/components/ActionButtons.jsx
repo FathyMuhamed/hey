@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiArrowRight, FiDownload, FiBookmark, FiShare2 } from "react-icons/fi";
+import { FiArrowRight, FiBookmark, FiShare2 } from "react-icons/fi";
 
 export default function ActionButtons({
   handleDownload,

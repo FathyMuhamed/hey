@@ -6,7 +6,11 @@ export default function Header() {
   return (
     <div className="relative">
       <div className="relative max-w-6xl mx-auto px-6 ">
-        <img src="https://placehold.co/60" alt="me" className="rounded-full" />
+        <img
+          src="/src/assets/me.jpeg"
+          alt="me"
+          className="rounded-full w-12 h-12 flex"
+        />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +88,7 @@ export default function Header() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mt-2 text-xs text-black max-w-2xl  leading-relaxed"
+          className="mt-2 text-sm text-black max-w-2xl  leading-relaxed"
         >
           Creative Front-end Engineer obsessed with designing and building
           exceptional, Develop things and seeing them grow up, Focusing on
