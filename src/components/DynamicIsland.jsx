@@ -5,6 +5,7 @@ import Time from "./Time";
 import { RiProgress5Line } from "react-icons/ri";
 
 export default function DynamicIsland({
+  setOpen,
   islandState,
   setIslandState,
   searchQuery,
@@ -39,7 +40,7 @@ export default function DynamicIsland({
         <IoMailUnreadOutline className="w-6 h-6 text-black" />
       </a>
       <AnimatePresence mode="wait">
-        {islandState === "nav" && <NavState setIslandState={setIslandState} />}
+        {islandState === "nav" && <NavState setOpen={setOpen} />}
 
         {islandState === "search" && (
           <SearchState
@@ -62,7 +63,7 @@ export default function DynamicIsland({
 }
 
 // Sub-components
-function NavState({ setIslandState }) {
+function NavState({ setOpen }) {
   return (
     <motion.div
       key="nav"
@@ -75,7 +76,7 @@ function NavState({ setIslandState }) {
       <div className="flex items-center gap-2 ">
         <button
           className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors hover:bg-slate-100 hover:rounded-lg px-2 py-1"
-          onClick={() => setIslandState("search")}
+          onClick={() => setOpen(true)}
         >
           <span className="text-xs ">⌘</span>
           <span className="text-xs ">+</span>

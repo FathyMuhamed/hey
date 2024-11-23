@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Command } from "cmdk";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { PiDevToLogo } from "react-icons/pi";
 import { MdOutlineEmail } from "react-icons/md";
 
-function CommandMenu({ setIslandState, onBarUpdate }) {
-  const [open, setOpen] = useState(false);
-
+function CommandMenu({ setIslandState, onBarUpdate, open, setOpen }) {
   useEffect(() => {
     const down = (e) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {

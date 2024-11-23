@@ -6,18 +6,18 @@ export default function Header() {
   return (
     <div className="relative">
       <div className="relative max-w-6xl mx-auto px-6 ">
-        <img
-          src="/src/assets/me.jpeg"
-          alt="me"
-          className="rounded-full w-12 h-12 flex"
-        />
         <motion.div
+          className="flex items-center gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-3"
         >
-          <span className="font-medium text-sm  py-2">
-            <span className="text-[#216E39] text-lg">Hi, I am Fathi.</span>I am
+          <img
+            src="/me.jpeg"
+            alt="me"
+            className="rounded-full w-16 h-16 flex"
+          />
+          <span className="font-medium text-sm  py-2 flex flex-col">
+            <span className="text-[#216E39] text-lg">Hi, I am Fathy.</span>I am
             a Frontend Engineer and creative build web app.
           </span>
         </motion.div>

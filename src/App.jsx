@@ -7,6 +7,7 @@ import { useProgress } from "./hooks/useProgress";
 import CommandMenu from "./components/Command";
 
 function App() {
+  const [open, setOpen] = useState(false);
   const [islandState, setIslandState] = useState("nav");
   const { searchQuery, searchResults, handleSearch, setSearchQuery } =
     useMockSearch();
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="h-screen relative overflow-hidden flex flex-col">
       <DynamicIsland
+        setOpen={setOpen}
         islandState={islandState}
         setIslandState={setIslandState}
         searchQuery={searchQuery}
@@ -43,6 +45,8 @@ function App() {
             onBarUpdate={() => {
               handleProgress();
             }}
+            open={open}
+            setOpen={setOpen}
           />
         </div>
       </main>
