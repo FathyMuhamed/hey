@@ -3,9 +3,9 @@ import DynamicIsland from "./components/DynamicIsland";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useMockSearch } from "./hooks/useMockSearch";
+import CommandMenu from "./components/Command";
 
 function App() {
-  // States
   const [islandState, setIslandState] = useState("nav");
   const { searchQuery, searchResults, handleSearch, setSearchQuery } =
     useMockSearch();
@@ -25,12 +25,7 @@ function App() {
       <main className="flex-1 flex items-center justify-center relative">
         <div className="flex flex-col items-center">
           <Header />
-          {/* <ActionButtons
-            handleDownload={handleDownload}
-            islandState={islandState}
-            saved={saved}
-            setSaved={setSaved}
-          /> */}
+          <CommandMenu />
         </div>
       </main>
 

@@ -32,7 +32,7 @@ export default function DynamicIsland({
         className={`text-white/70 hover:text-white transition-colors
         absolute ${
           islandState !== "nav" ? "top-2.5" : "top-1"
-        } -right-12 -translate-x-1/2 bg-white backdrop-blur-xl z-50
+        } -right-12 -translate-x-1/2  backdrop-blur-xl z-50
         `}
       >
         <IoMailUnreadOutline className="w-6 h-6 text-black" />
@@ -75,10 +75,12 @@ function NavState({ setIslandState }) {
       <div className="w-1.5 h-1.5 rounded-full bg-[#216E39]" />
       <div className="flex items-center gap-2 ">
         <button
+          className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors hover:bg-slate-100 hover:rounded-lg px-2 py-1"
           onClick={() => setIslandState("search")}
-          className="text-white/70 hover:text-white transition-colors"
         >
-          <FiSearch className="w-4 h-4 text-black" />
+          <span className="text-xs ">⌘</span>
+          <span className="text-xs ">+</span>
+          <span className="text-xs ">K</span>
         </button>
       </div>
     </motion.div>

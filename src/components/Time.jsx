@@ -13,7 +13,7 @@ export default function Time({ style }) {
 
   return (
     <div
-      className={`text-black transition-colors absolute top-1 -right-32 z-50 ${style}`}
+      className={`text-black transition-colors absolute top-1 -right-28 sm:-right-32 z-50 ${style}`}
     >
       {time.toLocaleTimeString("en-US", {
         hour: "2-digit",

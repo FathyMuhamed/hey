@@ -7,3 +7,25 @@
 body {
   @apply bg-white text-black font-sans;
 }
+
+@layer base {
+  [cmdk-dialog] {
+    animation: overlayShow 0.1s ease-out;
+  }
+
+  [cmdk-overlay] {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 0.1s ease-out;
+  }
+
+  @keyframes overlayShow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
