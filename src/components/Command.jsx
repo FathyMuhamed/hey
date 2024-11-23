@@ -5,7 +5,7 @@ import { FiGithub } from "react-icons/fi";
 import { PiDevToLogo } from "react-icons/pi";
 import { MdOutlineEmail } from "react-icons/md";
 
-function CommandMenu() {
+function CommandMenu({ setIslandState, onBarUpdate }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function CommandMenu() {
     <Command.Dialog
       open={open}
       onOpenChange={setOpen}
-      className="fixed top-[20%] left-1/2 -translate-x-1/2 w-full max-w-[540px] md:max-w-[640px] p-2 bg-white  rounded-xl shadow-2xl border text-gray-700"
+      className="fixed top-[20%] left-1/2 -translate-x-1/2 w-full max-w-[390px] sm:max-w-[540px] md:max-w-[640px] p-2 bg-white  rounded-xl shadow-2xl border text-gray-700"
     >
       <Command.Input
         placeholder="Type a command or search..."
@@ -81,9 +81,10 @@ function CommandMenu() {
           </Command.Item>
           <Command.Item
             className="px-4 py-2 rounded-lg text-sm text-gray-700  hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-            onSelect={() =>
-              navigator.clipboard.writeText("fathyymuhamed@gmail.com")
-            }
+            onSelect={() => {
+              navigator.clipboard.writeText("fathyymuhamed@gmail.com");
+              onBarUpdate();
+            }}
           >
             <MdOutlineEmail className="w-4 h-4" />
             Copy Email
@@ -95,6 +96,7 @@ function CommandMenu() {
                 "https://www.linkedin.com/messaging/compose?recipient=fathymuhamed",
                 "_blank"
               );
+              onBarUpdate();
             }}
           >
             <MdOutlineEmail className="w-4 h-4" />

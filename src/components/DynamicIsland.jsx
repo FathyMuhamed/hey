@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { FiSearch, FiX, FiDownload, FiCheck } from "react-icons/fi";
+import { FiSearch, FiX, FiCheck } from "react-icons/fi";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import Time from "./Time";
+import { RiProgress5Line } from "react-icons/ri";
 
 export default function DynamicIsland({
   islandState,
@@ -50,9 +51,7 @@ export default function DynamicIsland({
           />
         )}
 
-        {islandState === "downloading" && (
-          <DownloadingState progress={progress} />
-        )}
+        {islandState === "progress" && <DownloadingState progress={progress} />}
 
         {islandState === "complete" && (
           <CompleteState setIslandState={setIslandState} />
@@ -196,11 +195,8 @@ function DownloadingState({ progress }) {
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="w-5 h-5 rounded-full bg-[#216E39]/10 flex items-center justify-center"
         >
-          <FiDownload className="w-2.5 h-2.5 text-[#216E39]" />
+          <RiProgress5Line className="w-2.5 h-2.5 text-[#216E39]" />
         </motion.div>
-        <span className="text-xs font-medium text-white/90">
-          State of AI 2025.pdf
-        </span>
       </div>
       <div className="flex items-center gap-3">
         <span className="text-xs font-medium text-[#216E39]">{progress}%</span>
@@ -222,22 +218,17 @@ function CompleteState({ setIslandState }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex items-center justify-between h-full px-5"
+      className="flex items-center justify-between h-full px-5 cursor-pointer"
+      onClick={() => setIslandState("nav")}
     >
       <div className="flex items-center gap-3">
         <div className="w-5 h-5 rounded-full bg-[#32D74B]/10 flex items-center justify-center">
           <FiCheck className="w-2.5 h-2.5 text-[#32D74B]" />
         </div>
-        <span className="text-xs font-medium text-white/90">
-          Download complete
+        <span className="text-xs font-medium text-[#32D74B]/90">
+          success!!!
         </span>
       </div>
-      <button
-        onClick={() => setIslandState("nav")}
-        className="text-xs font-medium text-[#32D74B] hover:text-[#32D74B]/80 transition-colors"
-      >
-        View PDF →
-      </button>
     </motion.div>
   );
 }
