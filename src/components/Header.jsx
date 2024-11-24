@@ -102,6 +102,14 @@ export default function Header() {
         >
           RECENT WORK
         </motion.h4> */}
+        <motion.h4
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mt-3 text-sm text-neutral-500 max-w-2xl  leading-relaxed"
+        >
+          DAYS I CODE
+        </motion.h4>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
