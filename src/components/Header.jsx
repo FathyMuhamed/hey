@@ -44,7 +44,7 @@ export default function Header() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mt-6 text-sm text-neutral-500 max-w-2xl  leading-relaxed"
+          className="mt-3 text-sm text-neutral-500 max-w-2xl  leading-relaxed"
         >
           Previous roles
         </motion.p>

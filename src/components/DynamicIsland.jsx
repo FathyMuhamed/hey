@@ -34,7 +34,7 @@ export default function DynamicIsland({
         className={`text-white/70 hover:text-white transition-colors
         absolute ${
           islandState !== "nav" ? "top-2.5" : "top-1"
-        } -right-12 -translate-x-1/2  backdrop-blur-xl z-50
+        } -right-8 sm:-right-12 -translate-x-1/2  backdrop-blur-xl z-50
         `}
       >
         <IoMailUnreadOutline className="w-5 h-5 sm:w-6 sm:h-6 text-black" />

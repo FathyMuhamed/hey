@@ -4,9 +4,9 @@ import { FaDev } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-neutral-800/50 mt-auto">
+    <footer className="relative border-t border-neutral-800/50 mb-2">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="h-16 flex items-center justify-center">
+        <div className="h-10 flex items-center justify-center">
           <span className="text-sm font-medium flex items-center">
             Built with Fathy
           </span>
