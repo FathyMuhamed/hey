@@ -4,6 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { PiDevToLogo } from "react-icons/pi";
 import { MdOutlineEmail } from "react-icons/md";
+import { SiReaddotcv } from "react-icons/si";
 
 function CommandMenu({ setIslandState, onBarUpdate, open, setOpen }) {
   useEffect(() => {
@@ -103,51 +104,32 @@ function CommandMenu({ setIslandState, onBarUpdate, open, setOpen }) {
             Message on LinkedIn
           </Command.Item>
         </Command.Group>
-
-        {/* <Command.Group
-          heading="TOOLS"
-          className="mt-4 px-2 py-1 text-xs text-gray-400 dark:text-gray-500"
+        <Command.Group
+          heading="CV"
+          className="px-2 py-1 text-xs text-gray-400 dark:text-gray-500"
         >
-          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 cursor-pointer">
-            <BsCalculator className="w-4 h-4" />
-            Calculate
-            <div className="text-xs text-gray-400 ml-auto">
-              Try: 2 + 2 or 34% of 567
-            </div>
+          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700  hover:bg-gray-100  cursor-pointer">
+            <a
+              href="./FathyMuhamed-CV.pdf"
+              className="flex items-center gap-2"
+              target="_blank"
+            >
+              <SiReaddotcv className="w-4 h-4" />
+              Show Cv
+            </a>
           </Command.Item>
-
-          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 cursor-pointer">
-            <BsClock className="w-4 h-4" />
-            Check time anywhere
-            <div className="text-xs text-gray-400 ml-auto">
-              Try: time in tokyo or time in berlin
-            </div>
+          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700  hover:bg-gray-100  cursor-pointer">
+            <a
+              href="./FathyMuhamed-CV.pdf"
+              download
+              target="_blank"
+              className="flex items-center gap-2"
+            >
+              <SiReaddotcv className="w-4 h-4" />
+              Download Cv
+            </a>
           </Command.Item>
-
-          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 cursor-pointer">
-            <BsCloud className="w-4 h-4" />
-            Current weather
-            <div className="text-xs text-gray-400 ml-auto">
-              Aga: 18°C, overcast clouds
-            </div>
-          </Command.Item>
-
-          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 cursor-pointer">
-            <BsCurrencyDollar className="w-4 h-4" />
-            Convert currency
-            <div className="text-xs text-gray-400 ml-auto">
-              Try: 100 usd to eur
-            </div>
-          </Command.Item>
-
-          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 cursor-pointer">
-            <BsStars className="w-4 h-4" />
-            Ask AI
-            <div className="text-xs text-gray-400 ml-auto">
-              Get AI assistance for any question
-            </div>
-          </Command.Item>
-        </Command.Group> */}
+        </Command.Group>
       </Command.List>
     </Command.Dialog>
   );
