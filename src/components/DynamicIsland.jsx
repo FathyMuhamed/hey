@@ -37,7 +37,7 @@ export default function DynamicIsland({
         } -right-12 -translate-x-1/2  backdrop-blur-xl z-50
         `}
       >
-        <IoMailUnreadOutline className="w-6 h-6 text-black" />
+        <IoMailUnreadOutline className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
       </a>
       <AnimatePresence mode="wait">
         {islandState === "nav" && <NavState setOpen={setOpen} />}

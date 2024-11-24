@@ -5,7 +5,7 @@ import Github from "./Github";
 export default function Header() {
   return (
     <div className="relative">
-      <div className="relative max-w-6xl mx-auto px-6 ">
+      <div className="relative max-w-80  sm:max-w-6xl mx-auto pt-[15%] sm:pt-6">
         <motion.div
           className="flex items-center gap-3"
           initial={{ opacity: 0, y: 20 }}

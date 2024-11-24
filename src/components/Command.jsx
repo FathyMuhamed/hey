@@ -21,7 +21,7 @@ function CommandMenu({ setIslandState, onBarUpdate, open, setOpen }) {
     <Command.Dialog
       open={open}
       onOpenChange={setOpen}
-      className="fixed top-[20%] left-1/2 -translate-x-1/2 w-full max-w-[390px] sm:max-w-[540px] md:max-w-[640px] p-2 bg-white  rounded-xl shadow-2xl border text-gray-700"
+      className="fixed top-[20%] left-1/2 -translate-x-1/2 w-full max-w-[360px] sm:max-w-[540px] md:max-w-[640px] p-2 bg-white  rounded-xl shadow-2xl border text-gray-700"
     >
       <Command.Input
         placeholder="Type a command or search..."
