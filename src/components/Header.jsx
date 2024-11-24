@@ -17,8 +17,8 @@ export default function Header() {
             className="rounded-full w-16 h-16 flex"
           />
           <span className="font-medium text-sm  py-2 flex flex-col">
-            <span className="text-[#216E39] text-lg">Hi, I am Fathy.</span>I am
-            a Frontend Engineer and creative build web app.
+            <span className="text-[#216E39] text-lg">Hi, I am Fathy</span>I am a
+            Frontend Engineer and creative build web app.
           </span>
         </motion.div>
         <motion.p
