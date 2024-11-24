@@ -34,7 +34,10 @@ function CommandMenu({ setIslandState, onBarUpdate, open, setOpen }) {
           heading="VISIT"
           className="px-2 py-1 text-xs text-gray-400 dark:text-gray-500"
         >
-          <Command.Item className="px-4 py-2 rounded-lg text-sm text-gray-700  hover:bg-gray-100  cursor-pointer">
+          <Command.Item
+            className="px-4 py-2 rounded-lg text-sm text-gray-700  hover:bg-gray-100  cursor-pointer"
+            tabIndex={0}
+          >
             <a
               href="https://www.linkedin.com/in/fathymuhamed/"
               target="_blank"
